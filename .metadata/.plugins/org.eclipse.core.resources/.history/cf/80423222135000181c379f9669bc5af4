@@ -1,0 +1,160 @@
+#include "msp.h"
+#include "delay.h"
+#include "gpio.h"
+#include "spi.h"
+#include <math.h>
+#include "timer.h"
+#include "interrupt.h"
+#include "lut.h"
+#include "keypad.h"
+/**
+ * main.c
+ */
+
+volatile uint16_t freq = 1;
+
+
+void main(void){
+    uint16_t duty = 50;
+
+    uint16_t freqc = 30000;
+    uint16_t DC = 15000;
+
+    initClock();            //enable HFXT @ 48MHZ
+    uint16_t count = 233;
+    timerStruct timer;      //Initialize timer A0
+    timer.channel = TIM0;
+    timer.divide = DIV1;
+    timer.mode = UP;
+    timer.source = SMCLK;
+    timer.intccr = CCR0;
+    timer_init(&timer);
+    TIMER_A0->CCTL[1] |= TIMER_A_CCTLN_CCIE;
+
+    timer.channel = TIM1;
+    timer.divide = DIV8;
+    timer.mode = UPDN;
+    timer.source = SMCLK;
+    timer.intccr = CCR1;
+    timer_init(&timer);
+
+    timerCCR0(CCR0, count);
+    timerCCR0(CCR1, 116);
+    //timerCCR1(CCR0, 15000);
+    //timerCCR1(CCR1, 12000);
+
+    P1->DIR |= BIT0;
+    P1->OUT &= ~BIT0;
+
+    initKeypad();
+    spiInit();
+
+    //initNVIC(TA1_N_IRQn);
+    //flag = 0;
+    while(1){
+
+        if(flag){
+           switch(key){
+           case('1'):
+               freq = 1;
+           DC = ((30000/freq)*duty)/100;
+               freqc = 30000/freq;
+               break;
+           case('2'):
+               freq = 2;
+           DC = ((30000/freq)*duty)/100;
+               freqc = 30000/freq;
+
+               break;
+           case('3'):
+               freq = 3;
+           DC = ((30000/freq)*duty)/100;
+               freqc = 30000/freq;
+               break;
+           case('4'):
+               freq = 4;
+           DC = ((30000/freq)*duty)/100;
+               freqc = 30000/freq;
+               break;
+           case('5'):
+               freq = 5;
+           DC = ((30000/freq)*duty)/100;
+               freqc = 30000/freq;
+               break;
+           case('7'):
+               disableNVIC(TA0_0_IRQn);
+               disableNVIC(TA0_N_IRQn);
+               initNVIC(TA1_N_IRQn);
+               break;
+           case('8'):
+               disableNVIC(TA1_N_IRQn);
+               disableNVIC(TA0_N_IRQn);
+               initNVIC(TA0_0_IRQn);
+               break;
+           case('9'):
+               disableNVIC(TA1_N_IRQn);
+               disableNVIC(TA0_0_IRQn);
+               initNVIC(TA0_N_IRQn);
+               break;
+           case('*'):
+               if(duty > 10){
+                   duty -= 10;
+                   DC = ((30000/freq)*duty)/100;
+               }
+
+               break;
+           case('#'):
+               if(duty < 90){
+                   duty += 10;
+                   DC = ((30000/freq)*duty)/100;
+               }
+               break;
+           case('0'):
+               duty = 50;
+               DC = ((30000/freq)*duty)/100;
+               break;
+
+           }
+           flag = 0;
+           //TIMER_A1->CTL &= ~TIMER_A_CTL_MC_3;
+           timerCCR1(CCR0, freqc);
+           timerCCR1(CCR1, DC);
+           TIMER_A1->CTL |= TIMER_A_CTL_CLR;
+           edge = 0;
+        }
+
+    }
+}
+
+//Triangle Wave Generation
+
+void TA0_0_IRQHandler(void) {
+    static uint16_t dacval = 0;
+    EUSCI_A1->TXBUF = ((sinlut[dacval] & 0xF00) | 0x7000)>>8;
+    EUSCI_A1->TXBUF = (sinlut[dacval] & 0xFF);
+    dacval += freq;
+    if(dacval > 4095){
+        dacval = 0;
+    }
+
+    TIMER_A0->CCTL[0] &= ~TIMER_A_CCTLN_CCIFG; //clear IFG
+}
+
+void TA0_N_IRQHandler(void) {
+    static uint16_t dacval = 0;
+    EUSCI_A1->TXBUF = ((dacval & 0xF00) | 0x7000)>>8;
+    EUSCI_A1->TXBUF = (dacval & 0xFF);
+    dacval += freq;
+    if(dacval > 4095){
+        dacval = 0;
+    }
+
+    TIMER_A0->CCTL[1] &= ~TIMER_A_CCTLN_CCIFG; //clear IFG
+}
+
+void TA1_N_IRQHandler(void){
+    static uint8_t edge = 0;
+    driveDAC(4095*edge);
+    edge ^= 1;
+    TIMER_A1->CCTL[1] &= ~TIMER_A_CCTLN_CCIFG; //clear IFG
+}
