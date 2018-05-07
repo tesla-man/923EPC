@@ -18,7 +18,7 @@
 #define FREQ_48_MHZ     (uint16_t)480
 
 #ifndef FCPU
-#define FCPU    FREQ_48_MHZ
+#define FCPU    FREQ_12_MHZ
 #endif
 
 inline delay_ms(uint32_t time);

@@ -30,7 +30,7 @@ void spiInit(){
                         EUSCI_A_CTLW0_MODE_2   |
                         EUSCI_A_CTLW0_MSB      ;
 
-    EUSCI_A1->BRW = 0x0004;           //spi runs at 24MHz
+    EUSCI_A1->BRW = 0x0002;           //spi runs at 24MHz
     EUSCI_A1->CTLW0 &= ~EUSCI_A_CTLW0_SWRST;
 
 }
