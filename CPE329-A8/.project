@@ -46,6 +46,16 @@
 			<locationURI>PARENT-1-PROJECT_LOC/utils/gpio.h</locationURI>
 		</link>
 		<link>
+			<name>interrupt.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/utils/interrupt.c</locationURI>
+		</link>
+		<link>
+			<name>interrupt.h</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/utils/interrupt.h</locationURI>
+		</link>
+		<link>
 			<name>spi.c</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/utils/spi.c</locationURI>
@@ -54,6 +64,16 @@
 			<name>spi.h</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/utils/spi.h</locationURI>
+		</link>
+		<link>
+			<name>uart.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/utils/uart.c</locationURI>
+		</link>
+		<link>
+			<name>uart.h</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/utils/uart.h</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>

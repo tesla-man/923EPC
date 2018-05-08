@@ -1,0 +1,24 @@
+#include "msp.h"
+#include "interrupt.h"
+#include "gpio.h"
+#include "spi.h"
+#include "uart.h"
+#include "delay.h"
+
+
+int main(void)
+{
+    uint16_t data = 0;
+    initClock();
+    spiInit();
+    uartInit();
+
+    __enable_irq();
+
+
+    while(1){
+        if(data=checkCR()){
+            driveDAC(data);
+        }
+    }
+}

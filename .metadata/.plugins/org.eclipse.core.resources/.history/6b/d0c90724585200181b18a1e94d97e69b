@@ -1,0 +1,77 @@
+#include "msp.h"
+#include "delay.h"
+#include "interrupt.h"
+#include "gpio.h"
+#include "spi.h"
+
+volatile uint16_t result = 0;
+volatile uint8_t flag = 0;
+int main(void)
+{
+
+    initClock();
+
+    gpioStruct gpio;        //Configure UART pins
+    gpio.port = PORT2;
+    gpio.pins = PIN2 | PIN3;
+    gpio.af = AF1;
+    gpio_init(&gpio);
+
+    P1->DIR |= BIT0;
+    P1->OUT &= ~BIT0;
+
+    // Configure UART
+    EUSCI_A0->CTLW0 |= EUSCI_A_CTLW0_SWRST; // Put eUSCI in reset
+    EUSCI_A0->CTLW0 = EUSCI_A_CTLW0_SWRST | // Remain eUSCI in reset
+            EUSCI_B_CTLW0_SSEL__SMCLK;      // Configure eUSCI clock source for SMCLK
+
+    EUSCI_A0->BRW = 26;                     // 48000000/16/115200
+    EUSCI_A0->MCTLW = EUSCI_A_MCTLW_OS16;
+
+    EUSCI_A0->CTLW0 &= ~EUSCI_A_CTLW0_SWRST; // Initialize eUSCI
+    EUSCI_A0->IFG &= ~EUSCI_A_IFG_RXIFG;    // Clear eUSCI RX interrupt flag
+    EUSCI_A0->IE |= EUSCI_A_IE_RXIE;        // Enable USCI_A0 RX interrupt
+
+    spiInit();
+
+
+    // Enable global interrupt
+    __enable_irq();
+
+    // Enable eUSCIA0 interrupt in NVIC module
+    initNVIC(EUSCIA0_IRQn);
+
+    while(1){
+        if(flag){
+            driveDAC(result);
+            result = 0;
+
+            flag = 0;
+        }
+    }
+
+}
+// UART interrupt service routine
+void EUSCIA0_IRQHandler(void)
+{
+    uint8_t data = 0;
+    if (EUSCI_A0->IFG & EUSCI_A_IFG_RXIFG)
+    {
+        if((EUSCI_A0->RXBUF) != 0x0D){
+            data = (EUSCI_A0->RXBUF) & 0x0F;
+            result = result*10 + data;
+
+        }
+        else{
+            flag = 1;
+            while(!(EUSCI_A0->IFG & EUSCI_A_IFG_TXIFG));
+            EUSCI_A0->TXBUF = 0x0A;
+        }
+
+        while(!(EUSCI_A0->IFG & EUSCI_A_IFG_TXIFG));
+        EUSCI_A0->TXBUF = EUSCI_A0->RXBUF;
+    }
+    P1->OUT ^= BIT0;
+    delay_ms(5);
+    P1->OUT ^= BIT0;
+}

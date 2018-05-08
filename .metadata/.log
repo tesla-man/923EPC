@@ -2305,3 +2305,451 @@ Command-line arguments:  -os win32 -ws win32 -arch x86 -product com.ti.ccstudio.
 !ENTRY com.ti.ccstudio.debug 1 0 2018-05-07 16:18:04.299
 !MESSAGE DS_ERROR: CORTEX_M4_0: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
 
+!SESSION 2018-05-07 16:57:14.355 -----------------------------------------------
+eclipse.buildId=4.6.0.I20160606-1100
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product com.ti.ccstudio.branding.product
+
+!ENTRY com.ti.common.core 4 0 2018-05-07 16:57:18.824
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 4 0 2018-05-07 16:57:18.824
+!MESSAGE debugServerDir=C:/ti/ccsv7/ccs_base/DebugServer
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-05-07 17:35:02.665
+!MESSAGE DS_ERROR: CORTEX_M4_0: GEL: Encountered a problem loading file: C:\Users\Contovasilis\Desktop\CPE329\CPE329-A8\Debug\CPE329-A8.out Could not open file
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-05-07 17:35:12.662
+!MESSAGE DS_ERROR: CORTEX_M4_0: GEL: Encountered a problem loading file: C:\Users\Contovasilis\Desktop\CPE329\CPE329-A8\Debug\CPE329-A8.out Could not open file
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-05-07 17:49:49.332
+!MESSAGE DS_ERROR: CORTEX_M4_0: GEL: Encountered a problem loading file: C:\Users\Contovasilis\Desktop\CPE329\CPE329-A8\Debug\CPE329-A8.out Could not open file
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-05-07 18:16:07.662
+!MESSAGE DS_ERROR: CORTEX_M4_0: GEL: Encountered a problem loading file: C:\Users\Contovasilis\Desktop\CPE329\CPE329-A8\Debug\CPE329-A8.out Could not open file
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-05-07 18:21:40.791
+!MESSAGE DS_ERROR: CORTEX_M4_0: GEL: Encountered a problem loading file: C:\Users\Contovasilis\Desktop\CPE329\CPE329-A8\Debug\CPE329-A8.out Could not open file
+
+!SESSION 2018-05-07 19:07:43.684 -----------------------------------------------
+eclipse.buildId=4.6.0.I20160606-1100
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product com.ti.ccstudio.branding.product
+
+!ENTRY com.ti.common.core 4 0 2018-05-07 19:07:48.862
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 4 0 2018-05-07 19:07:48.951
+!MESSAGE debugServerDir=C:/ti/ccsv7/ccs_base/DebugServer
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2018-05-07 19:08:19.017
+!MESSAGE Connection to http://software-dl.ti.com/dsps/dsps_public_sw/sdo_ccstudio/gcc/Updates/win32/p2.index failed on software-dl.ti.com. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: software-dl.ti.com
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:131)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.ti.ccstudio.app.center 4 0 2018-05-07 19:08:19.048
+!MESSAGE Unable to read http://software-dl.ti.com/ccs/non-esd/ccs_appcenter/apps_7.4.0.json file.
+!STACK 0
+java.net.UnknownHostException: software-dl.ti.com
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1202)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1138)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1032)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:966)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1546)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1474)
+	at java.net.URL.openStream(URL.java:1045)
+	at com.ti.ccstudio.app.center.internal.CCSAppCenter.readFile(CCSAppCenter.java:196)
+	at com.ti.ccstudio.app.center.internal.CCSAppCenter.getAppJson_0(CCSAppCenter.java:212)
+	at com.ti.ccstudio.app.center.internal.CCSAppCenter.access$1(CCSAppCenter.java:211)
+	at com.ti.ccstudio.app.center.internal.CCSAppCenter$1.run(CCSAppCenter.java:183)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2018-05-07 19:08:19.276
+!MESSAGE Unknown Host: http://software-dl.ti.com/dsps/dsps_public_sw/sdo_ccstudio/gcc/Updates/win32/compositeContent.xml
+!STACK 0
+java.net.UnknownHostException: software-dl.ti.com
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:304)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:263)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2018-05-07 19:08:19.292
+!MESSAGE Connection to http://software-dl.ti.com/dsps/dsps_public_sw/sdo_ccstudio/codegen/Updates/p2linux/p2.index failed on software-dl.ti.com. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: software-dl.ti.com
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:131)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2018-05-07 19:08:19.526
+!MESSAGE Connection to http://software-dl.ti.com/dsps/dsps_public_sw/sdo_ccstudio/codegen/Updates/p2linux/content.xml.xz failed on software-dl.ti.com. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: software-dl.ti.com
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:131)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2018-05-07 19:08:19.733
+!MESSAGE Unknown Host: http://software-dl.ti.com/dsps/dsps_public_sw/sdo_ccstudio/codegen/Updates/p2linux/content.xml.xz
+!STACK 0
+java.net.UnknownHostException: software-dl.ti.com
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:131)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2018-05-07 19:08:19.733
+!MESSAGE Connection to http://software-dl.ti.com/ccs/esd/device_support_auto/p2.index failed on software-dl.ti.com. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: software-dl.ti.com
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:131)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2018-05-07 19:08:19.952
+!MESSAGE Unknown Host: http://software-dl.ti.com/ccs/esd/device_support_auto/content.xml
+!STACK 0
+java.net.UnknownHostException: software-dl.ti.com
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:304)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:263)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2018-05-07 19:08:20.046
+!MESSAGE Connection to http://software-dl.ti.com/dsps/dsps_public_sw/sdo_ccstudio/codegen/Updates/p2mac/p2.index failed on software-dl.ti.com. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: software-dl.ti.com
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:131)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2018-05-07 19:08:20.265
+!MESSAGE Connection to http://software-dl.ti.com/dsps/dsps_public_sw/sdo_ccstudio/codegen/Updates/p2mac/content.xml.xz failed on software-dl.ti.com. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: software-dl.ti.com
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:131)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2018-05-07 19:08:20.495
+!MESSAGE Unknown Host: http://software-dl.ti.com/dsps/dsps_public_sw/sdo_ccstudio/codegen/Updates/p2mac/content.xml.xz
+!STACK 0
+java.net.UnknownHostException: software-dl.ti.com
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:131)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2018-05-07 19:08:20.495
+!MESSAGE Connection to http://software-dl.ti.com/dsps/dsps_public_sw/sdo_ccstudio/codegen/Updates/p2win32/p2.index failed on software-dl.ti.com. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: software-dl.ti.com
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:131)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2018-05-07 19:08:20.717
+!MESSAGE Connection to http://software-dl.ti.com/dsps/dsps_public_sw/sdo_ccstudio/codegen/Updates/p2win32/content.xml.xz failed on software-dl.ti.com. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: software-dl.ti.com
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:131)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2018-05-07 19:08:20.936
+!MESSAGE Unknown Host: http://software-dl.ti.com/dsps/dsps_public_sw/sdo_ccstudio/codegen/Updates/p2win32/content.xml.xz
+!STACK 0
+java.net.UnknownHostException: software-dl.ti.com
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:131)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2018-05-07 19:08:20.936
+!MESSAGE Connection to http://software-dl.ti.com/ccs/non-esd/dvt/ccs6.0/p2.index failed on software-dl.ti.com. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: software-dl.ti.com
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:131)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2018-05-07 19:08:21.154
+!MESSAGE Unknown Host: http://software-dl.ti.com/ccs/non-esd/dvt/ccs6.0/content.xml
+!STACK 0
+java.net.UnknownHostException: software-dl.ti.com
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:304)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:263)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2018-05-07 19:08:21.529
+!MESSAGE Connection to http://software-dl.ti.com/ccs/esd/CCSv7/Updates/p2.index failed on software-dl.ti.com. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: software-dl.ti.com
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:131)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2018-05-07 19:08:21.732
+!MESSAGE Unknown Host: http://software-dl.ti.com/ccs/esd/CCSv7/Updates/compositeContent.xml
+!STACK 0
+java.net.UnknownHostException: software-dl.ti.com
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:304)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:263)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SESSION 2018-05-07 19:33:38.217 -----------------------------------------------
+eclipse.buildId=4.6.0.I20160606-1100
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product com.ti.ccstudio.branding.product
+
+!ENTRY com.ti.common.core 4 0 2018-05-07 19:33:42.818
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 4 0 2018-05-07 19:33:42.818
+!MESSAGE debugServerDir=C:/ti/ccsv7/ccs_base/DebugServer
