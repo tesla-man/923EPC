@@ -10,7 +10,7 @@ int main(void)
     spiInit();
     uartInit();
 
-    __enable_irq();
+    __enable_irq(); //scoop poop
 
     while(1){
         if((data=checkCR())<4096){
