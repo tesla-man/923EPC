@@ -1,7 +1,7 @@
 ******************************************************************************
                   TI ARM Linker PC v16.9.7                     
 ******************************************************************************
->> Linked Fri May 04 20:54:26 2018
+>> Linked Thu May 10 17:22:31 2018
 
 OUTPUT FILE NAME:   <CPE329-A5.out>
 ENTRY POINT SYMBOL: "_c_int00"  address: 00000be9
@@ -251,7 +251,6 @@ ffffffff  binit
 000009d9  memcpy                         
 0000087f  readIFG                        
 000006e3  set_DCO                        
-UNDEFED   timerCCR                       
 00000ac3  timerCCR0                      
 00000ae1  timerCCR1                      
 00000a75  timer_init                     
@@ -379,6 +378,5 @@ ffffffff  __c_args__
 ffffffff  binit                          
 UNDEFED   SHT$$INIT_ARRAY$$Base          
 UNDEFED   SHT$$INIT_ARRAY$$Limit         
-UNDEFED   timerCCR                       
 
-[118 symbols]
+[117 symbols]

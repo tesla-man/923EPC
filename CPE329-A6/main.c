@@ -23,7 +23,7 @@ void main(void)
     timer.intccr = CCR0;
     timer_init(&timer);
 
-    timerCCR(CCR0, 47);    //set CCR0 value to 47
+    timerCCR0(CCR0, 47);    //set CCR0 value to 47
 
     initNVIC(TA0_0_IRQn);
 

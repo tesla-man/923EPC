@@ -16,7 +16,7 @@ void checkPwd();
 
 void main(void){
 
-    set_DCO(FREQ_24_MHZ);   //set DCO frequency to 24MHZ
+    set_DCO(FCPU);   //set DCO frequency to 24MHZ
     lcdInit();              //Initialize LCD
     //initKeypad();           //Initialize keypad pins and interrupts
     updateDisplay(0);       //Print lock screen

@@ -42,8 +42,8 @@ int main(void) {
     timer.intccr = CCR2;
     timer_init(&timer);
 
-    timerCCR(CCR0, 5000);
-    timerCCR(CCR2, 2500);
+    timerCCR0(CCR0, 5000);
+    timerCCR0(CCR2, 2500);
 
     initNVIC(TA0_N_IRQn);
 

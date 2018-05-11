@@ -57,11 +57,13 @@ void lcdInit(){
     gpio.port = CPORT;
     gpio.pins = RS | RW | ENA;
     gpio.type = OUTPUT;
+    gpio.af = AF0;
     gpio_init(&gpio);
 
     gpio.port = DPORT;
     gpio.pins = DB4 | DB5 | DB6 | DB7;
     gpio.type = OUTPUT;
+    gpio.af = AF0;
     gpio_init(&gpio);
 
     sendCmdNib(FUNCTION);
@@ -84,6 +86,7 @@ void checkBF()
     gpio.port = DPORT;
     gpio.pins = DB7;
     gpio.type = INPUT;
+    gpio.af = AF0;
     gpio_init(&gpio);
 
     gpioClear(CPORT, RS);
@@ -96,6 +99,7 @@ void checkBF()
     gpio.port = DPORT;
     gpio.pins = DB7;
     gpio.type = OUTPUT;
+    gpio.af = AF0;
     gpio_init(&gpio);
 }
 
