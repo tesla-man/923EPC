@@ -18,12 +18,12 @@ void main(void){
 
     set_DCO(FCPU);   //set DCO frequency to 24MHZ
     lcdInit();              //Initialize LCD
-    //initKeypad();           //Initialize keypad pins and interrupts
+    initKeypad();           //Initialize keypad pins and interrupts
     updateDisplay(0);       //Print lock screen
 
     while(1){
-        //delay_ms(50);
-        //checkPwd();         //check key array, and '*'
+        delay_ms(50);
+        checkPwd();         //check key array, and '*'
     }
 }
 
