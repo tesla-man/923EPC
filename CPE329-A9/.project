@@ -24,4 +24,46 @@
 		<nature>org.eclipse.cdt.core.ccnature</nature>
 		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>delay.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/utils/delay.c</locationURI>
+		</link>
+		<link>
+			<name>delay.h</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/utils/delay.h</locationURI>
+		</link>
+		<link>
+			<name>gpio.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/utils/gpio.c</locationURI>
+		</link>
+		<link>
+			<name>gpio.h</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/utils/gpio.h</locationURI>
+		</link>
+		<link>
+			<name>interrupt.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/utils/interrupt.c</locationURI>
+		</link>
+		<link>
+			<name>interrupt.h</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/utils/interrupt.h</locationURI>
+		</link>
+		<link>
+			<name>uart.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/utils/uart.c</locationURI>
+		</link>
+		<link>
+			<name>uart.h</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/utils/uart.h</locationURI>
+		</link>
+	</linkedResources>
 </projectDescription>

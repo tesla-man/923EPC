@@ -13,5 +13,6 @@
 void uartInit();
 uint16_t checkCR();
 void EUSCIA0_IRQHandler(void);
+void uartWrite(uint16_t data);
 
 #endif /* UART_H_ */

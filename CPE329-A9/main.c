@@ -1,22 +1,21 @@
 #include "msp.h"
-
+#include "uart.h"
+#include "delay.h"
 
 /**
  * main.c
  */
-volatile uint8_t flag;
+volatile uint8_t flago;
+volatile  uint16_t voltage;
 int main(void) {
     volatile unsigned int i;
 
-    WDT_A->CTL = WDT_A_CTL_PW |             // Stop WDT
-                 WDT_A_CTL_HOLD;
+    initClock();
 
-    // GPIO Setup
-    P1->OUT &= ~BIT0;                       // Clear LED to start
-    P1->DIR |= BIT0;                        // Set P1.0/LED to output
     P5->SEL1 |= BIT4;                       // Configure P5.4 for ADC
     P5->SEL0 |= BIT4;
 
+    uartInit();
     // Enable global interrupt
     __enable_irq();
 
@@ -33,19 +32,19 @@ int main(void) {
 
     while (1)
     {
-       if(flag){
+       if(flago){
            ADC14->CTL0 |= ADC14_CTL0_ENC | ADC14_CTL0_SC;
-           flag = 0;
+           flago = 0;
        }
-
+       uartWrite(voltage);
+       delay_ms(200);
     }
 }
 
 // ADC14 interrupt service routine
 void ADC14_IRQHandler(void) {
     static uint16_t conv;
-    static double voltage;
     conv = ADC14->MEM[0];
-    voltage = 3.24*((double)conv/16384);
-    flag = 1;
+    voltage = (3240*conv)/16384;
+    flago = 1;
 }

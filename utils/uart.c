@@ -46,6 +46,29 @@ uint16_t checkCR(){
     return 4096;
 }
 
+void uartWrite(uint16_t data){
+    uint8_t num[4] = {0, 0, 0, 0};
+    uint8_t i=3;
+
+    while (data != 0)
+    {
+        int rem = data % 10;
+        num[i--] = (rem > 9)? (rem-10) + 'a' : rem + '0';
+        data = data/10;
+    }
+    i = 0;
+    while(i<4){
+        while(!(EUSCI_A0->IFG & EUSCI_A_IFG_TXIFG));
+        EUSCI_A0->TXBUF = num[i++];
+    }
+
+    while(!(EUSCI_A0->IFG & EUSCI_A_IFG_TXIFG));
+    EUSCI_A0->TXBUF = 0x0A;     //write New line
+    while(!(EUSCI_A0->IFG & EUSCI_A_IFG_TXIFG));
+    EUSCI_A0->TXBUF = 0x0D;     //write carraige return
+
+}
+
 void EUSCIA0_IRQHandler(void){
     uint8_t data = 0;
 

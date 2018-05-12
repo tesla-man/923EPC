@@ -10,6 +10,8 @@ main.obj: C:/ti/ccsv7/ccs_base/arm/include/msp432p401r_classic.h
 main.obj: C:/ti/ccsv7/ccs_base/arm/include/CMSIS/core_cm4.h
 main.obj: C:/ti/ccsv7/ccs_base/arm/include/CMSIS/cmsis_compiler.h
 main.obj: C:/ti/ccsv7/ccs_base/arm/include/system_msp432p401r.h
+main.obj: C:/Users/Contovasilis/Desktop/CPE329/utils/uart.h
+main.obj: C:/Users/Contovasilis/Desktop/CPE329/utils/delay.h
 
 ../main.c: 
 C:/ti/ccsv7/ccs_base/arm/include/msp.h: 
@@ -21,3 +23,5 @@ C:/ti/ccsv7/ccs_base/arm/include/msp432p401r_classic.h:
 C:/ti/ccsv7/ccs_base/arm/include/CMSIS/core_cm4.h: 
 C:/ti/ccsv7/ccs_base/arm/include/CMSIS/cmsis_compiler.h: 
 C:/ti/ccsv7/ccs_base/arm/include/system_msp432p401r.h: 
+C:/Users/Contovasilis/Desktop/CPE329/utils/uart.h: 
+C:/Users/Contovasilis/Desktop/CPE329/utils/delay.h: 
