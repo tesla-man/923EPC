@@ -9,7 +9,7 @@
 #include "interrupt.h"
 
 volatile uint16_t result;
-volatile uint8_t flag = 0;
+volatile uint8_t uartflag = 0;
 
 void uartInit(){
     gpioStruct gpio;        //Configure UART pins
@@ -37,10 +37,10 @@ void uartInit(){
 
 uint16_t checkCR(){
     uint16_t tmp;
-    if(flag){
+    if(uartflag){
         tmp = result;
         result = 0;
-        flag = 0;
+        uartflag = 0;
         return tmp;
     }
     return 4096;
@@ -69,6 +69,11 @@ void uartWrite(uint16_t data){
 
 }
 
+void uartWriteByte(uint8_t data){
+    while(!(EUSCI_A0->IFG & EUSCI_A_IFG_TXIFG));
+    EUSCI_A0->TXBUF = data;
+}
+
 void EUSCIA0_IRQHandler(void){
     uint8_t data = 0;
 
@@ -79,7 +84,7 @@ void EUSCIA0_IRQHandler(void){
             result = result*10 + data;
         }
         else{
-            flag = 1;
+            uartflag = 1;
             while(!(EUSCI_A0->IFG & EUSCI_A_IFG_TXIFG));
             EUSCI_A0->TXBUF = 0x0A;
         }
@@ -87,4 +92,24 @@ void EUSCIA0_IRQHandler(void){
         while(!(EUSCI_A0->IFG & EUSCI_A_IFG_TXIFG));
         EUSCI_A0->TXBUF = EUSCI_A0->RXBUF;
     }
+}
+
+int fputc(int _c, register FILE *_fp)
+{
+  uartWriteByte((unsigned char) _c);
+
+  return((unsigned char)_c);
+}
+
+int fputs(const char *_ptr, register FILE *_fp)
+{
+  unsigned int i, len;
+
+  len = strlen(_ptr);
+
+  for(i=0 ; i<len ; i++){
+      uartWriteByte((unsigned char) _ptr[i]);
+  }
+
+  return len;
 }

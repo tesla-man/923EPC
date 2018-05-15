@@ -1,0 +1,32 @@
+#include "msp.h"
+#include "uart.h"
+#include "delay.h"
+
+
+void main(void)
+{
+    float voltage = 50;
+    uint8_t color = 5;
+    uint8_t i = 0;
+    initClock();
+    uartInit();
+
+    printf("\033[2J");
+    printf("\033)");
+    printf("voltage: %.2f", voltage);
+
+
+    while(1){
+
+        if(i==8){
+            i=0;
+        }
+       // printf("\033[2J");
+        //printf("\033[%dm", 40 + i);
+        i++;
+    }
+}
+
+
+
+

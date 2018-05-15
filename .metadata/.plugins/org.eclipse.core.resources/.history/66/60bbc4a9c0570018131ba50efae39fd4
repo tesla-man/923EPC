@@ -1,0 +1,50 @@
+#include "msp.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <stddef.h>
+#include <string.h>
+#include <stdint.h>
+#include "uart.h"
+#include "delay.h"
+
+
+int fputc(int _c, register FILE *_fp);
+int fputs(const char *_ptr, register FILE *_fp);
+
+
+int main(void)
+{
+
+    float voltage = 50;
+
+    initClock();
+    uartInit();
+
+    printf("/033[2J");
+    printf("voltage: %.2f", voltage);
+    while(1){
+    }
+}
+
+
+int fputc(int _c, register FILE *_fp)
+{
+  uartWriteByte((unsigned char) _c);
+
+  return((unsigned char)_c);
+}
+
+int fputs(const char *_ptr, register FILE *_fp)
+{
+  unsigned int i, len;
+
+  len = strlen(_ptr);
+
+  for(i=0 ; i<len ; i++)
+  {
+      uartWriteByte((unsigned char) _ptr[i]);
+  }
+
+  return len;
+}
+
