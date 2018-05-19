@@ -1,0 +1,154 @@
+/*
+ * terminal.c
+ *
+ *  Created on: May 14, 2018
+ *      Author: Contovasilis
+ */
+
+#include "term.h"
+#include "delay.h"
+#include "uart.h"
+#include "string.h"
+
+void termDmmSplash(void){
+    uint8_t i = 255;
+    printf("\033c");            //full reset
+    printf("\033[1;37;44m");     //set blue bg
+    printf("\033[2J");          //clear terminal
+    printf("\033[H");           //home cursor
+
+
+    //printf("\033(0");               //select special character set
+    //printf("\033[2;27fDigital Multimeter Project");
+    //printf("\033[3;30fCPE329 - Jeff Gerfen");
+    //printf("\033%G");
+   // printf("\033[1;18f");
+    //printf("\033#3Digital Multimeter");
+    //printf("\033[2;18f");
+    //printf("\033#4Digital Multimeter");
+
+    drawBarGraph(6, 10, 80);
+    updateBar(6, 10, 80, 3000, 4095);
+
+    bigText(0, 2, "Digital Multimeter");
+    text(0, 5, "hello");
+
+
+
+
+}
+
+void drawBox(uint8_t x, uint8_t y, uint8_t height, uint8_t width){
+    printf("\033(0");
+    printf("\033[%d;%dfl",y,x);
+    printf("\033[%d;%dfk",y,x+width);
+    printf("\033[%d;%dfj",y+height,x+width);
+    printf("\033[%d;%dfm",y+height,x);
+
+    drawHLine(x+1, y, width-1);
+    drawHLine(x+1, y+height, width-1);
+    drawVLine(x, y+1, height-1);
+    drawVLine(x+width, y+1, height-1);
+    //printf("\033%%G");
+}
+
+void drawHLine(uint8_t x, uint8_t y, uint8_t width){
+    //printf("\033(0");
+
+    while(width){
+        printf("\033[%d;%dfq",y,x+width-1);
+        width--;
+    }
+    //printf("\033%%G");
+}
+
+void drawVLine(uint8_t x, uint8_t y, uint8_t height){
+    //printf("\033(0");
+    while(height){
+        printf("\033[%d;%dfx",y+height-1,x);
+        height--;
+    }
+    //printf("\033%%G");
+}
+
+text(uint8_t x, uint8_t y, char *string){
+    printf("\033%%G");
+    if(x==0){
+        x = (TERM_COL - strlen(string))/2;
+    }
+    printf("\033[%d;%df%s", y, x, string);
+}
+
+bigText(uint8_t x, uint8_t y, char *string){
+    printf("\033%%G");
+    if(x==0){
+        x = (TERM_COL - strlen(string))/2;
+    }
+    printf("\033[%d;%df\033#3%s", y, x/2, string);
+    printf("\033[%d;%df\033#4%s", y+1, x/2, string);
+}
+void termDmmDC(void){
+
+}
+
+void drawBarGraph(uint8_t x, uint8_t y, uint8_t width){
+    printf("\033(0");
+    printf("\033[%d;%dfx",y+1,x-1);
+    printf("\033[%d;%dfx",y+1,x+width);
+    while(width){
+        printf("\033[%d;%dfs",y,x+width-1);
+        printf("\033[%d;%dfo",y+2,x+width-1);
+        width--;
+    }
+}
+
+void updateBar(uint8_t x, uint8_t y, uint8_t width, uint16_t value, uint16_t scale){
+    uint16_t bars = (((value*1000)/scale)*width)/1000;
+    printf("\033(0");
+    while(bars){
+        printf("\033[%d;%dfa",y+1,x+bars-1);
+        bars--;
+    }
+}
+
+void termDmmAC(void){
+
+}
+
+void termDmmBargraph(void){
+
+}
+
+tek4014_coord(unsigned x, unsigned y)
+{
+    unsigned char lox, loy, hix, hiy, eb;
+    static unsigned char lloy = -1, lhix = -1, lhiy = -1, leb = -1;
+
+    if (y > 3071)
+        y = 3071;
+    if (x > 4095)
+        x = 4095;
+    hiy = (y >> 7) & 0x1f;
+    loy = (y >> 2) & 0x1f;
+    hix = (x >> 7) & 0x1f;
+    lox = (x >> 2) & 0x1f;
+    eb = (x & 3) | ((y & 3) << 2);
+
+    if (hiy != lhiy)
+        uartWriteByte(hiy | 0x20);
+    if (eb != leb)
+        uartWriteByte( eb | 0x60);
+    if (eb != leb || loy != lloy || hix != lhix)
+        uartWriteByte(loy | 0x60);
+    if (hix != lhix)
+        uartWriteByte(hix | 0x20);
+    uartWriteByte(lox | 0x40);
+        lhiy = hiy;
+        lhix = hix;
+        lloy = loy;
+        leb = eb;
+}
+
+
+
+

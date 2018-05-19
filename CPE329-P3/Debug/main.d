@@ -16,8 +16,14 @@ main.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.7.LTS/include/linkage.h
 main.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.7.LTS/include/stdio.h
 main.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.7.LTS/include/stdarg.h
 main.obj: C:/Users/Contovasilis/Desktop/CPE329/utils/delay.h
+main.obj: C:/Users/Contovasilis/Desktop/CPE329/utils/interrupt.h
+main.obj: C:/Users/Contovasilis/Desktop/CPE329/utils/gpio.h
+main.obj: C:/Users/Contovasilis/Desktop/CPE329/utils/lcd.h
+main.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.7.LTS/include/stdio.h
 main.obj: C:/Users/Contovasilis/Desktop/CPE329/utils/term.h
 main.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.7.LTS/include/stdio.h
+main.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.7.LTS/include/math.h
+main.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.7.LTS/include/_defs.h
 
 ../main.c: 
 C:/ti/ccsv7/ccs_base/arm/include/msp.h: 
@@ -35,5 +41,11 @@ C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.7.LTS/include/linkage.h:
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.7.LTS/include/stdio.h: 
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.7.LTS/include/stdarg.h: 
 C:/Users/Contovasilis/Desktop/CPE329/utils/delay.h: 
+C:/Users/Contovasilis/Desktop/CPE329/utils/interrupt.h: 
+C:/Users/Contovasilis/Desktop/CPE329/utils/gpio.h: 
+C:/Users/Contovasilis/Desktop/CPE329/utils/lcd.h: 
+C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.7.LTS/include/stdio.h: 
 C:/Users/Contovasilis/Desktop/CPE329/utils/term.h: 
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.7.LTS/include/stdio.h: 
+C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.7.LTS/include/math.h: 
+C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.7.LTS/include/_defs.h: 

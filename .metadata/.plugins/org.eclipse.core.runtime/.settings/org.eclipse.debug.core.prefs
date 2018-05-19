@@ -3,4 +3,4 @@
 //org.eclipse.debug.core.PREFERRED_DELEGATES/org.eclipse.cdt.launch.postmortemLaunchType=org.eclipse.cdt.dsf.gdb.launch.coreCLaunch,debug,;
 //org.eclipse.debug.core.PREFERRED_DELEGATES/org.eclipse.cdt.launch.remoteApplicationLaunchType=org.eclipse.rse.remotecdt.dsf.debug,debug,;
 eclipse.preferences.version=1
-prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<watchExpressions/>\r\n
+prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<watchExpressions>\r\n<expression enabled\="true" text\="conv"/>\r\n<expression enabled\="true" text\="voltage"/>\r\n<expression enabled\="true" text\="capture"/>\r\n<expression enabled\="true" text\="strig"/>\r\n<expression enabled\="true" text\="rms"/>\r\n<expression enabled\="true" text\="rmsresult"/>\r\n<expression enabled\="true" text\="k&\#13;&\#10;"/>\r\n<expression enabled\="true" text\="__FlashCtl_remaskBurstDataPost"/>\r\n<expression enabled\="true" text\="data"/>\r\n<expression enabled\="true" text\="bars"/>\r\n<expression enabled\="true" text\="vpos"/>\r\n</watchExpressions>\r\n

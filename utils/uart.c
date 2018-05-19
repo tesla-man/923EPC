@@ -8,8 +8,8 @@
 #include "gpio.h"
 #include "interrupt.h"
 
-volatile uint16_t result;
-volatile uint8_t uartflag = 0;
+volatile uint16_t result, uartflag = 0;
+
 
 void uartInit(){
     gpioStruct gpio;        //Configure UART pins
@@ -38,12 +38,12 @@ void uartInit(){
 uint16_t checkCR(){
     uint16_t tmp;
     if(uartflag){
-        tmp = result;
-        result = 0;
+        //tmp = result;
+        //result = 0;
         uartflag = 0;
-        return tmp;
+        return 1;
     }
-    return 4096;
+    return 50;
 }
 
 void uartWrite(uint16_t data){
@@ -75,22 +75,21 @@ void uartWriteByte(uint8_t data){
 }
 
 void EUSCIA0_IRQHandler(void){
-    uint8_t data = 0;
-
+    uint8_t datau = 0;
+    static uint8_t i = 0;
+    char *click="\033[M";
     if (EUSCI_A0->IFG & EUSCI_A_IFG_RXIFG)
     {
-        if((EUSCI_A0->RXBUF) != 0x0D){
-            data = (EUSCI_A0->RXBUF) & 0x0F;
-            result = result*10 + data;
+        datau = (EUSCI_A0->RXBUF);
+
+        while(datau == click[i]){
+            i++;
         }
-        else{
+        if(i==3){
             uartflag = 1;
-            while(!(EUSCI_A0->IFG & EUSCI_A_IFG_TXIFG));
-            EUSCI_A0->TXBUF = 0x0A;
+            i = 0;
         }
 
-        while(!(EUSCI_A0->IFG & EUSCI_A_IFG_TXIFG));
-        EUSCI_A0->TXBUF = EUSCI_A0->RXBUF;
     }
 }
 
