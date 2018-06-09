@@ -12,7 +12,7 @@ void initKeypad(){
     gpioStruct gpio;                        //define struct
     gpio.port = CLPORT;                     //select column ports
     gpio.pins = CLPINS;                     //select column pins
-    gpio.type = INPUT_PU;                   //initialize GPIOs as inputs with pull-downs
+    gpio.type = INPUT_PD;                   //initialize GPIOs as inputs with pull-downs
     gpio.af = AF0;
     gpio_init(&gpio);                       //configure struct
 
@@ -22,9 +22,9 @@ void initKeypad(){
     gpio.af = AF0;
     gpio_init(&gpio);                       //configure struct
 
-    gpioClear(RWPORT, RWPINS);               //set all row pins low
+    gpioSet(RWPORT, RWPINS);               //set all row pins low
 
-    initExtInt(CLPORT, CLPINS, FALLING);     //initialize external interrupts on
+    initExtInt(CLPORT, CLPINS, RISING);     //initialize external interrupts on
                                             //column pins with falling edge trigger
 
     enableExtInt(CLPORT, CLPINS);           //enable external interrupts

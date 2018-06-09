@@ -10,7 +10,7 @@
 
 static uint32_t GPIO_PORT_TO_BASE[] =
 {   0x00,
-    (uint32_t)P1,
+    (uint32_t)P1+0,
     (uint32_t)P1+1,
     (uint32_t)P3,
     (uint32_t)P3+1,

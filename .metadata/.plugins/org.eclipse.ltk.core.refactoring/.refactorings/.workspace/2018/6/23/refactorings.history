@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;CPE329A11&apos; to &apos;CPE329-A11&apos;" description="Rename resource &apos;CPE329A11&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/CPE329A11" name="CPE329-A11" stamp="1528503790396" updateReferences="true"/>
+</session>

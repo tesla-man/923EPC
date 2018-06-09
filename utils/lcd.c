@@ -154,16 +154,16 @@ void sendStringXY(char *str, uint8_t x, uint8_t y){
     }
 }
 
-void sendInteger(int IntegerToDisplay)
+void sendInteger(int IntegerToDisplay, uint8_t length)
 {
     char StringToDisplay[16];
-    sprintf(StringToDisplay, "%d", IntegerToDisplay);
+    sprintf(StringToDisplay, "%-*d", length, IntegerToDisplay);
     sendString(StringToDisplay);
 }
 
-void sendIntegerXY(int IntegerToDisplay, uint8_t x, uint8_t y){
+void sendIntegerXY(int IntegerToDisplay, uint8_t x, uint8_t y, uint8_t length){
     char StringToDisplay[16];
-    sprintf(StringToDisplay, "%d", IntegerToDisplay);
+    sprintf(StringToDisplay, "%-*d", length, IntegerToDisplay);
     moveCursor(x, y);
     sendString(StringToDisplay);
 }

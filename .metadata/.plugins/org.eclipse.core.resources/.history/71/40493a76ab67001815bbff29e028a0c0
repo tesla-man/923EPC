@@ -1,0 +1,17 @@
+#include "msp.h"
+#include "lcd.h"
+#include "gpio.h"
+#include "delay.h"
+
+void main(void){
+    initClock();
+
+
+	lcdInit();
+
+	sendString("Im a piece of trash");
+
+	while(1){
+	}
+
+}

@@ -1,6 +1,6 @@
 #define __unsigned_chars__ 1	/* Predefined */
-#define __DATE__ "May 18 2018"	/* Predefined */
-#define __TIME__ "14:01:31"	/* Predefined */
+#define __DATE__ "Jun  8 2018"	/* Predefined */
+#define __TIME__ "17:23:11"	/* Predefined */
 #define __STDC__ 1	/* Predefined */
 #define __STDC_VERSION__ 199409L	/* Predefined */
 #define __TI_C99_COMPLEX_ENABLED__ 1	/* Predefined */
@@ -36,5 +36,5 @@
 #define __TI_STRICT_FP_MODE__ 1	/* Predefined */
 #define _OPTIMIZE_FOR_SPACE 1
 #define __MSP432P401R__ 1
-#define FCPU FREQ_24_MHZ
+#define FCPU FREQ_48_MHZ
 #define ccs 1

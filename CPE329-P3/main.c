@@ -115,7 +115,7 @@ void ADC14_IRQHandler(void) {
     static int dsum, dcv = 0, vpos = 0;
 
     conv = (ADC14->MEM[0]);
-    dcv = (6596*(conv-8191))/8191;
+    dcv = (6596*(conv-8191))/8191 - 3;
 
         if(strig){
             asum = asum + (uint32_t) (abs(dcv) * abs(dcv));
@@ -134,7 +134,6 @@ void ADC14_IRQHandler(void) {
                 dsum = 0;
             }
         }
-
 }
 
 /*Timer A0 interrupt handler

@@ -42,6 +42,8 @@ int main(void) {
     timer.intccr = CCR2;
     timer_init(&timer);
 
+    TIMER_A0->CCTL[2] |= TIMER_A_CCTLN_OUTMOD_4;
+
     timerCCR0(CCR0, 5000);
     timerCCR0(CCR2, 2500);
 

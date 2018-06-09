@@ -1,0 +1,44 @@
+#include "msp.h"
+#include "gpio.h"
+#include "keypad.h"
+#include "interrupt.h"
+#include "timer.h"
+#include "delay.h"
+/**
+ * main.c
+ */
+void main(void)
+{
+
+    P5->DIR |= BIT6;
+    P5->SEL0 |= BIT6;
+
+
+    initClock();            //enable HFXT @ 48MHZ
+
+    timerStruct timer;
+    timer.channel = TIM2;
+    timer.divide = DIV8;
+    timer.mode = UPDN;
+    timer.source = SMCLK;
+    timer.intccr = CCR0;
+    TIMER_A2->EX0 = TIMER_A_EX0_TAIDEX_6;
+    TIMER_A2->CCR[0] = 8880;
+    TIMER_A2->CCR[1] = 1;
+    TIMER_A2->CCTL[1] |= TIMER_A_CCTLN_OUTMOD_2;
+    timer_init(&timer);
+
+    //delay_ms(500);
+    //initKeypad();           //init keypad
+
+
+    while(1){
+
+        TIMER_A2->CCR[1] = 470; //825 max, 470 min
+        delay_ms(1000);
+        TIMER_A2->CCR[1] = 825;
+        delay_ms(1000);
+
+    }
+
+}

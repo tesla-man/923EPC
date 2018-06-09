@@ -1,7 +1,7 @@
 ******************************************************************************
                   TI ARM Linker PC v16.9.7                     
 ******************************************************************************
->> Linked Fri May 18 21:47:24 2018
+>> Linked Mon May 21 14:08:26 2018
 
 OUTPUT FILE NAME:   <CPE329-P3.out>
 ENTRY POINT SYMBOL: "_c_int00"  address: 000034a5
@@ -263,8 +263,8 @@ UNDEFED   SHT$$INIT_ARRAY$$Limit
 0000381f  T32_INT2_IRQHandler            
 0000381f  T32_INTC_IRQHandler            
 0000381f  TA0_0_IRQHandler               
-00001d5b  TA0_N_IRQHandler               
-00001d5b  TA0_N_IRQHandler               
+00001d5d  TA0_N_IRQHandler               
+00001d5d  TA0_N_IRQHandler               
 0000381f  TA1_0_IRQHandler               
 0000381f  TA1_N_IRQHandler               
 0000381f  TA2_0_IRQHandler               
@@ -428,8 +428,8 @@ address   name
 00001b25  main                           
 00001c59  ADC14_IRQHandler               
 00001c59  ADC14_IRQHandler               
-00001d5b  TA0_N_IRQHandler               
-00001d5b  TA0_N_IRQHandler               
+00001d5d  TA0_N_IRQHandler               
+00001d5d  TA0_N_IRQHandler               
 00001e59  SystemCoreClockUpdate          
 000020d1  SystemInit                     
 0000218d  gpioSet                        

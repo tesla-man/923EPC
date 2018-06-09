@@ -4,18 +4,13 @@
 #include "delay.h"
 
 void main(void){
-	set_DCO(FCPU);
+    initClock();
 
 
 	lcdInit();
-	moveCursor(3,1);
-	sendCharacter(0x00);
-	sendCharacter(0x01);
-	sendCharacter(0x02);
-	//moveCursor(3,2);
-	sendCharacterXY(0xFF, 3, 2);
-	sendCharacter(0xFF);
-	sendCharacter(0xFF);
+
+	sendString("I'm a piece of");
+	sendStringXY("shit", 1, 2);
 
 	while(1){
 	}
