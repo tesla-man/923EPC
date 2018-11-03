@@ -13,7 +13,7 @@ void i2cRead(uint8_t slaveAddress, char *dataAddress);
 int main(void)
 {
     volatile uint32_t i;
-
+    //initClock();
     WDT_A->CTL = WDT_A_CTL_PW |             // Stop watchdog timer
             WDT_A_CTL_HOLD;
 
@@ -59,13 +59,13 @@ int main(void)
             EUSCI_B_IE_BCNTIE |
             EUSCI_B_IE_NACKIE;
 
-    char *data = "ABC";
-    char *address = "AB";
+    char *data = "ABCD";
+    char *address = 0x70;
 
-    //i2cWrite(0x50, data, 3);
+    i2cWrite(0x70, data, 4);
     //delay_ms(20);
 
-    i2cRead(0x50, address);
+    //i2cRead(0x70, address);
 
 
 
@@ -93,9 +93,6 @@ void EUSCIB0_IRQHandler(void)
         EUSCI_B0->IFG &= ~EUSCI_B_IFG_TXIFG0;
         EUSCI_B0->TXBUF = TXData[i];
         i++;
-
-
-
     }
 
     if (EUSCI_B0->IFG & EUSCI_B_IFG_RXIFG0)
